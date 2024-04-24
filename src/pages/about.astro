@@ -1,0 +1,37 @@
+---
+import LinkButton from "@components/LinkButton.astro";
+import { TECH_STACK } from "@config";
+import AboutLayout from "@layouts/AboutLayout.astro";
+---
+
+<AboutLayout frontmatter={{ title: "About" }}>
+  <p class="mt-4">
+    Hi! I'm Davide. I'm a SW engineer currently working on my own <LinkButton
+      className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+      href="https://gdlauncher.com"
+    >
+      startup
+    </LinkButton> I love writing long articles about the stuff I learn and use. My
+    content is long-form, didactic and exploratory, and often an excuse to teach (and learn)
+    Rust.
+  </p>
+
+  <h1 class="mt-4 text-xl sm:text-2xl">My Usual Tech Stack</h1>
+  <div class="mt-8 flex flex-col gap-4">
+    {
+      Object.entries(TECH_STACK).map(([key, value]) => (
+        <div class="bg-skin-card p-4">
+          <div class="text-skin-accent underline decoration-dashed underline-offset-4">
+            {key}
+          </div>
+          <ul class="mt-4 flex flex-wrap gap-10">
+            {value.map((v, i) => (
+              <li class={i === 0 ? "" : "list-disc"}>{v}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+  <h1 class="mt-6 text-xl sm:text-2xl">My Work & Projects</h1>
+</AboutLayout>

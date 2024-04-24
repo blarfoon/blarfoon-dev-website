@@ -1,13 +1,13 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "AstroPaper",
+  website: "https://blarfoon.dev",
+  author: "Davide Ceschia",
+  desc: "Davide Ceschia - Software Engineer. CEO of GorillaDevs Inc. (GDLauncher) - Former SWE at TSM/Blitz.gg",
+  title: "Blarfoon.dev",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
-  postPerPage: 3,
+  postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
@@ -23,10 +23,69 @@ export const LOGO_IMAGE = {
   height: 46,
 };
 
+export const TECH_STACK = {
+  "Javascript / Typescript": [
+    "React",
+    "NextJS",
+    "SolidJS",
+    "NodeJS",
+    "TRPC",
+    "Prisma",
+    "Electron",
+    "Sentry",
+    "Vite",
+    "Playwright",
+    "Jest",
+  ],
+  Rust: [
+    "Tokio",
+    "Tauri",
+    "Axum",
+    "RSPC",
+    "Prisma-Rust",
+    "SQLx",
+    "Anyhow",
+    "Serde",
+    "Thiserror",
+    "Tungstenite",
+  ],
+  Golang: ["Echo", "Gorm", "Amqp", "GoFuzz"],
+  Databases: [
+    "PostgreSQL",
+    "MySQL",
+    "SQLite",
+    "MongoDB",
+    "Redis",
+    "RabbitMQ",
+    "DynamoDB",
+  ],
+  "Cloud Services": [
+    "AWS",
+    "GCP",
+    "DigitalOcean",
+    "Fly.io",
+    "Netlify",
+    "Vercel",
+    "Railway",
+    "Supabase",
+  ],
+  More: [
+    "Docker",
+    "Git",
+    "VSCode",
+    "Concurrency",
+    "WebAssembly",
+    "CI/CD",
+    "Design Patterns",
+  ],
+};
+
+export const PROJECTS = {};
+
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://github.com/blarfoon",
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
@@ -44,7 +103,7 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "LinkedIn",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://www.linkedin.com/in/davide-ceschia/",
     linkTitle: `${SITE.title} on LinkedIn`,
     active: true,
   },
@@ -56,9 +115,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Twitter",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://twitter.com/davideceschia",
     linkTitle: `${SITE.title} on Twitter`,
-    active: false,
+    active: true,
   },
   {
     name: "Twitch",
